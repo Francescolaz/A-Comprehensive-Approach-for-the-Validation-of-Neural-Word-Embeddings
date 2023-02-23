@@ -1,0 +1,25 @@
+
+A class used to clean and pre-process text documents (or corpus)
+
+
+Attributes
+----------
+digits : str or bool
+    flag for dealing with digits, if True specify 'removal' or 'zero' (replace)
+lemma : str or bool
+    flag for text lemmatization, if True specifiy one method among 'TextBlob', 'Spacy' or 'WordNet'
+POS_noun : str or bool
+    flag for keeping only nouns, if True specifiy one method among 'TextBlob', 'Spacy' or 'WordNet'
+punctuation : bool
+    flag for removing punctuation
+lowercase : bool
+    flag for lowercasing text
+token : bool
+    flag for text tokenization
+
+Methods
+-------
+FitText(corpus : str or None, list_text : str or None)
+    Applies the selected pre-processing strategy to the provided text
+SaveText(file_format: str {'txt', 'pickle'}, filename: str)
+    Saves the cleaned text as line sentece text file or pickle list of tokens

@@ -1,0 +1,15 @@
+corpus : str or list
+    collection of documents for training, allowed corpus are line sentence text files or list of tokens
+model : str
+    neural embedding architecture, allowed values are 'Word2Vec' or 'FastText'
+hyperparameters : dict
+    dictionary with mandatory keys for training configuration 'vector_size', 'window', 'min_count' and 'epochs'
+
+Methods
+-------
+Train()
+    Starts the training procedure
+SaveModel(file_format: str {'txt', 'pickle'}, filename: str)
+    Saves the output model, with all the collateral files needed
+WordVectors()
+    Saves the *.wordvectors file for faster vector-query executions
